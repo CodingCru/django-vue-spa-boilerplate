@@ -1,0 +1,5 @@
+black
+ruff
+mypy
+django-stubs
+pre-commit
