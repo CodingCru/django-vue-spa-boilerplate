@@ -1,4 +1,4 @@
-name: Backend Lint & Type Check
+name: Backend CI Checks
 
 on:
   push:
