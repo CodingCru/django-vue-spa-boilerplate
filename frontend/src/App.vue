@@ -7,8 +7,13 @@ onMounted(async () => {
     const r = await fetch('/api/health/')
     if (!r.ok) throw new Error(`${r.status} ${r.statusText}`)
     msg.value = JSON.stringify(await r.json())
-  } catch (e:any) {
-    msg.value = `error: ${e.message}`
+  }
+  catch (e:unknown) {
+      if (e instanceof Error) {
+          msg.value = `error: ${e.message}`
+      } else {
+          msg.value = 'Unknown error'
+      }
   }
 })
 </script>
