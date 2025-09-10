@@ -17,5 +17,3 @@ if command -v pnpm >/dev/null; then
 else
   npm install
 fi
-
-echo "✅ Bootstrap done. Run scripts/dev_local.sh to start both apps."
